@@ -1,0 +1,2 @@
+mv *.pdf Plots
+mv *.Rout Logs

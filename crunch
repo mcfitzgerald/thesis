@@ -1,8 +1,8 @@
 # EDIT EACH RUN - Data source and file naming
 
-name.trunk <- "Linked EGFR from A431 (Yarden '87 5a)"  # Base file name
+name.trunk <- "Kinase-dead EGFR in Vesicles (Wofsy '92 5a)"  # Base file name
 
-data.file <-"DATA/yard_dimer.csv"  # Data file location
+data.file <-"DATA/wof_kd.csv"  # Data file location
 
 # Output messages
 
@@ -13,7 +13,7 @@ sink(paste(name.trunk,".Rout",sep=""))
 library(minpack.lm)  # For better nls fitting
 
 #Plot options
-graph.xax <- "Free EGF [nM]"
+graph.xax <- "Free EGF (molecules/cell E+4)"
 
 graph.yax <- "Bound Fraction"
 
