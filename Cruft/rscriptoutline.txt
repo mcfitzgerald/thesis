@@ -1,0 +1,12 @@
+find data set
+
+
+
+
+
+
+plot output:
+
+*make sure labeled axes, title, legend
+
+bound vs log free

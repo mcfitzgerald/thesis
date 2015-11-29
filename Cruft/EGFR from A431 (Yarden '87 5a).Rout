@@ -1,0 +1,27 @@
+null device 
+          1 
+It.    0, RSS =    5.95934, Par. =          1
+It.    1, RSS =    4.81773, Par. =   0.580176
+It.    2, RSS =    1.93367, Par. =   0.129453
+It.    3, RSS =    1.67901, Par. =   0.110342
+It.    4, RSS =    1.17499, Par. =  0.0778235
+It.    5, RSS =   0.285594, Par. =  0.0320379
+It.    6, RSS =  0.0414505, Par. =  0.0151446
+It.    7, RSS =  0.0414446, Par. =  0.0152056
+It.    8, RSS =  0.0414446, Par. =  0.0151991
+It.    9, RSS =  0.0414446, Par. =  0.0151998
+It.   10, RSS =  0.0414446, Par. =  0.0151997
+
+Formula: B ~ (k1 * L)/(1 + (k1 * L))
+
+Parameters:
+   Estimate Std. Error t value Pr(>|t|)    
+k1 0.015200   0.001118   13.59 3.08e-11 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.0467 on 19 degrees of freedom
+
+Number of iterations to convergence: 10 
+Achieved convergence tolerance: 1.49e-08
+
