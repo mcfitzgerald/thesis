@@ -1,8 +1,8 @@
 # EDIT EACH RUN - Data source and file naming
 
-name.trunk <- "Non-dimerizing EGFR in CHO (Pike '08 5a)"  # Base file name
+name.trunk <- "Non-AssymKin EGFR in 660K CHO (Pike '08 5b)"  # Base file name
 
-data.file <-"DATA/Pike_08_F5a_87K.csv"  # Data file location
+data.file <-"DATA/Pike_08_F5b_660K.csv"  # Data file location
 
 # Output messages
 
