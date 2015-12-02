@@ -1,8 +1,18 @@
+# R script works on two column csv files containing free ligand concentration
+# (col header "L") and bound fraction (col header "B" w/ values 0..1). The 
+# variables "name.trunk" and "data.file" determine the output filenames 
+# and data source respectively. This script can be run as part of a shell
+# script that loops over all *.csv in a directory. It will generate 5 files:
+# A pdf of a semi-log plot of the binding data, a pdf of a direct plot with 
+# two fitted lines for nls solutions to the Adair equation for 1 and 2 classes
+# of binding sides, one pdf each for the residuals of the fits, and one .Rout
+# file that contains the fit parameters, and and ANOVA comparison of the fits
+
 # EDIT EACH RUN - Data source and file naming
 
-name.trunk <- "Linked EGFR from A431 (Yarden '87 5a)"  # Base file name
+name.trunk <- "yard_no-linker"
 
-data.file <-"DATA/yard_dimer.csv"  # Data file location
+data.file <-"yard_no-linker.csv"
 
 # Output messages
 
@@ -71,7 +81,7 @@ main=name.trunk)
 
 lines(pred.lvals, adair1_fit, col="blue")
 
-lines(pred.lvals, adair2_fit, col="red")
+lines(pred.lvals, adair2_fit, col="red", lty=2)
 
 legend("bottomright", c("raw data","adair1","adair2"), cex=0.8, col=c("black",
 "blue", "red"), pch=c("o","-","-"))

@@ -1,12 +1,12 @@
 # EDIT EACH RUN - Data source and file naming
 
-name.trunk <- "Linked EGFR from A431 (Yarden '87 5b)"  # Base file name
+name.trunk <- "yard_no-linker"
 
-data.file <-"DATA/yard_dimer.csv"  # Data file location
+data.file <-"yard_no-linker.csv"
 
 # Output messages
 
-#sink(paste(name.trunk,".Rout",sep=""))
+sink(paste(name.trunk,".Rout",sep=""))
 
 # Load libraries
 
@@ -71,7 +71,7 @@ main=name.trunk)
 
 lines(pred.lvals, adair1_fit, col="blue")
 
-lines(pred.lvals, adair2_fit, col="red")
+lines(pred.lvals, adair2_fit, col="red", lty=2)
 
 legend("bottomright", c("raw data","adair1","adair2"), cex=0.8, col=c("black",
 "blue", "red"), pch=c("o","-","-"))
@@ -83,4 +83,20 @@ dev.off()
 adair1_resid <- resid(adair1)
 adair2_resid <- resid(adair2)
 
+pdf(file=paste(name.trunk, "Residual1.pdf"), height=5, width=5) 
 
+par(cex.main=0.9)  #Scale title font
+
+plot(data.loaded$L, adair1_resid, log="x", xlab=graph.xax, ylab="residuals",
+main=paste(name.trunk, "Adair1 Residual"))
+
+dev.off()
+
+pdf(file=paste(name.trunk, "Residual2.pdf"), height=5, width=5) 
+
+par(cex.main=0.9)  #Scale title font
+
+plot(data.loaded$L, adair2_resid, log="x",  xlab=graph.xax, ylab="residuals", 
+main=paste(name.trunk, "Adair2 Residual"))
+
+dev.off()
